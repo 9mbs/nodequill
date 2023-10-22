@@ -1,0 +1,35 @@
+{
+  "name": "nodequill",
+  "version": "1.0.0",
+  "description": "A low-level and extendable logger the prints directly to the output stream by default",
+  "main": "./dist/es5/index.js",
+  "module": "./dist/es6/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:es5": "npx babel src --out-dir dist/es5 --config-file ./build/es5.babelrc",
+    "build:es6": "npx babel src --out-dir dist/es6 --config-file ./build/es6.babelrc",
+    "build": "npm run build:es5 && npm run build:es6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9mbs/nodequill.git"
+  },
+  "keywords": [
+    "stdout",
+    "logger",
+    "nodejs"
+  ],
+  "author": "@9mbs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/9mbs/nodequill/issues"
+  },
+  "homepage": "https://github.com/9mbs/nodequill#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2"
+  }
+}
